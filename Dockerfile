@@ -1,9 +1,7 @@
-FROM n8nio/n8n:latest
+FROM n8nio/n8n:latest-debian
 
 USER root
 
-RUN apt-get update && apt-get install -y ffmpeg python3 python3-pip curl
-
-RUN pip3 install edge-tts
+RUN apt-get update && apt-get install -y ffmpeg
 
 USER node
